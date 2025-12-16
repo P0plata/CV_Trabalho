@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdbhqsjfy1wto"]
+
+[ext_resource type="Script" uid="uid://sxcji61mw387" path="res://objetos/glaidos_coin.gd" id="1_do2ee"]
+[ext_resource type="Shader" uid="uid://c7u7qgbj2233j" path="res://objetos/glaidos_coin.gdshader" id="1_kbofm"]
+[ext_resource type="Texture2D" uid="uid://dfin1u8qmk6hd" path="res://objetos/Bob_ver2.1.png" id="2_jy58s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jy58s"]
+render_priority = 0
+shader = ExtResource("1_kbofm")
+shader_parameter/sprite_tex = ExtResource("2_jy58s")
+shader_parameter/time_scale = 1.0
+shader_parameter/rot_x = 1.5
+shader_parameter/rot_y = 2.0
+shader_parameter/rot_z = 0.5
+shader_parameter/glitch_strength = 0.2
+shader_parameter/rgb_shift = 0.02
+shader_parameter/outline_size = 0.012
+shader_parameter/outline_color = Vector3(0.1, 1, 1)
+shader_parameter/emission_power = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbofm"]
+size = Vector3(0.3, 0.6, 0.1)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_do2ee")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_jy58s")
+texture = ExtResource("2_jy58s")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_kbofm")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_body_entered"]

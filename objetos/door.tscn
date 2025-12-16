@@ -1,0 +1,103 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxxvslww37rao"]
+
+[ext_resource type="Script" uid="uid://cobuotpeqr6ts" path="res://objetos/porta.gd" id="1_nb8x0"]
+
+[sub_resource type="Animation" id="Animation_gcrg1"]
+resource_name = "Open_door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.94),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -2.0943952, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xwn67"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xwn67"]
+_data = {
+&"Open_door": SubResource("Animation_gcrg1"),
+&"RESET": SubResource("Animation_xwn67")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xwn67"]
+size = Vector3(0.5, 2.4, 1.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k3lt6"]
+size = Vector3(1.6, 2.4, 2.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcrg1"]
+size = Vector3(0.2, 2.4, 1.4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3lt6"]
+albedo_color = Color(0.3372549, 0.20392157, 0.16470589, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xqs2t"]
+size = Vector3(0.2, 2.4, 1.4)
+
+[node name="Door" type="Node3D" node_paths=PackedStringArray("anim_player", "spawn_position")]
+script = ExtResource("1_nb8x0")
+anim_player = NodePath("AnimationPlayer")
+spawn_position = NodePath("Spawnsala")
+
+[node name="Spawnsala" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Hinge/Porta")
+libraries = {
+&"": SubResource("AnimationLibrary_xwn67")
+}
+
+[node name="Area_open" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area_open"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+shape = SubResource("BoxShape3D_xwn67")
+
+[node name="Area_block" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area_block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.2, -0.4)
+shape = SubResource("BoxShape3D_k3lt6")
+
+[node name="Hinge" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.7)
+
+[node name="Porta" type="StaticBody3D" parent="Hinge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0.7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/Porta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+shape = SubResource("BoxShape3D_gcrg1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge/Porta"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+layers = 3
+material_override = SubResource("StandardMaterial3D_k3lt6")
+mesh = SubResource("BoxMesh_xqs2t")
+
+[connection signal="body_entered" from="Area_open" to="." method="_ativacao_entrar"]
+[connection signal="body_exited" from="Area_open" to="." method="_ativacao_sair"]
+[connection signal="body_entered" from="Area_block" to="." method="_seguranca_entrar"]
+[connection signal="body_exited" from="Area_block" to="." method="_seguranca_sair"]
