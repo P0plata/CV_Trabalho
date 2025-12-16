@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://hhulldp23f3e"]
+[gd_scene load_steps=36 format=3 uid="uid://hhulldp23f3e"]
 
 [ext_resource type="Script" uid="uid://c3gdcx1e6mf26" path="res://salas/sala_1.gd" id="1_gcrg1"]
 [ext_resource type="PackedScene" uid="uid://cdbhqsjfy1wto" path="res://objetos/glaidos_coin.tscn" id="2_gcrg1"]
@@ -50,14 +50,26 @@ data = PackedVector3Array(-2, 0.06, 5, 2, 0.06, 5, -2, -0.06, 5, 2, 0.06, 5, 2, 
 [sub_resource type="BoxMesh" id="BoxMesh_0wuud"]
 size = Vector3(6, 0.12, 10)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o8r27"]
+data = PackedVector3Array(-3, 0.06, 5, 3, 0.06, 5, -3, -0.06, 5, 3, 0.06, 5, 3, -0.06, 5, -3, -0.06, 5, 3, 0.06, -5, -3, 0.06, -5, 3, -0.06, -5, -3, 0.06, -5, -3, -0.06, -5, 3, -0.06, -5, 3, 0.06, 5, 3, 0.06, -5, 3, -0.06, 5, 3, 0.06, -5, 3, -0.06, -5, 3, -0.06, 5, -3, 0.06, -5, -3, 0.06, 5, -3, -0.06, -5, -3, 0.06, 5, -3, -0.06, 5, -3, -0.06, -5, 3, 0.06, 5, -3, 0.06, 5, 3, 0.06, -5, -3, 0.06, 5, -3, 0.06, -5, 3, 0.06, -5, -3, -0.06, 5, 3, -0.06, 5, -3, -0.06, -5, 3, -0.06, 5, 3, -0.06, -5, -3, -0.06, -5)
+
 [sub_resource type="BoxMesh" id="BoxMesh_e3by4"]
 size = Vector3(6, 0.12, 24)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cep8v"]
+data = PackedVector3Array(-3, 0.06, 12, 3, 0.06, 12, -3, -0.06, 12, 3, 0.06, 12, 3, -0.06, 12, -3, -0.06, 12, 3, 0.06, -12, -3, 0.06, -12, 3, -0.06, -12, -3, 0.06, -12, -3, -0.06, -12, 3, -0.06, -12, 3, 0.06, 12, 3, 0.06, -12, 3, -0.06, 12, 3, 0.06, -12, 3, -0.06, -12, 3, -0.06, 12, -3, 0.06, -12, -3, 0.06, 12, -3, -0.06, -12, -3, 0.06, 12, -3, -0.06, 12, -3, -0.06, -12, 3, 0.06, 12, -3, 0.06, 12, 3, 0.06, -12, -3, 0.06, 12, -3, 0.06, -12, 3, 0.06, -12, -3, -0.06, 12, 3, -0.06, 12, -3, -0.06, -12, 3, -0.06, 12, 3, -0.06, -12, -3, -0.06, -12)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qa2gd"]
 size = Vector3(6, 0.12, 24)
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_f0hjn"]
+data = PackedVector3Array(-3, 0.06, 12, 3, 0.06, 12, -3, -0.06, 12, 3, 0.06, 12, 3, -0.06, 12, -3, -0.06, 12, 3, 0.06, -12, -3, 0.06, -12, 3, -0.06, -12, -3, 0.06, -12, -3, -0.06, -12, 3, -0.06, -12, 3, 0.06, 12, 3, 0.06, -12, 3, -0.06, 12, 3, 0.06, -12, 3, -0.06, -12, 3, -0.06, 12, -3, 0.06, -12, -3, 0.06, 12, -3, -0.06, -12, -3, 0.06, 12, -3, -0.06, 12, -3, -0.06, -12, 3, 0.06, 12, -3, 0.06, 12, 3, 0.06, -12, -3, 0.06, 12, -3, 0.06, -12, 3, 0.06, -12, -3, -0.06, 12, 3, -0.06, 12, -3, -0.06, -12, 3, -0.06, 12, 3, -0.06, -12, -3, -0.06, -12)
+
 [sub_resource type="BoxMesh" id="BoxMesh_cep8v"]
 size = Vector3(3.6, 0.12, 10)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4y7c0"]
+data = PackedVector3Array(-1.8, 0.06, 5, 1.8, 0.06, 5, -1.8, -0.06, 5, 1.8, 0.06, 5, 1.8, -0.06, 5, -1.8, -0.06, 5, 1.8, 0.06, -5, -1.8, 0.06, -5, 1.8, -0.06, -5, -1.8, 0.06, -5, -1.8, -0.06, -5, 1.8, -0.06, -5, 1.8, 0.06, 5, 1.8, 0.06, -5, 1.8, -0.06, 5, 1.8, 0.06, -5, 1.8, -0.06, -5, 1.8, -0.06, 5, -1.8, 0.06, -5, -1.8, 0.06, 5, -1.8, -0.06, -5, -1.8, 0.06, 5, -1.8, -0.06, 5, -1.8, -0.06, -5, 1.8, 0.06, 5, -1.8, 0.06, 5, 1.8, 0.06, -5, -1.8, 0.06, 5, -1.8, 0.06, -5, 1.8, 0.06, -5, -1.8, -0.06, 5, 1.8, -0.06, 5, -1.8, -0.06, -5, 1.8, -0.06, 5, 1.8, -0.06, -5, -1.8, -0.06, -5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7bddx"]
 size = Vector3(4, 0.12, 4.4)
@@ -93,9 +105,11 @@ size = Vector3(1, 1, 2)
 
 [sub_resource type="Environment" id="Environment_e3by4"]
 
-[node name="Sala_1" type="Node3D" node_paths=PackedStringArray("puzzle_cam")]
+[node name="Sala_1" type="Node3D" node_paths=PackedStringArray("puzzle_cam", "area_lava", "ponto_spawn")]
 script = ExtResource("1_gcrg1")
 puzzle_cam = NodePath("corection/Objetos/Camera3D")
+area_lava = NodePath("corection/Chao_Teto/chao_t/Chao_2/AreaMorte")
+ponto_spawn = NodePath("corection/Spawnpoint")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_xqs2t")
@@ -159,17 +173,32 @@ layers = 2
 mesh = SubResource("BoxMesh_0wuud")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="corection/walls/pared_1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corection/walls/pared_1/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_o8r27")
+
 [node name="pared_2" type="MeshInstance3D" parent="corection/walls"]
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -7, 3, -5)
 layers = 6
 mesh = SubResource("BoxMesh_e3by4")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="corection/walls/pared_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corection/walls/pared_2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cep8v")
+
 [node name="pared_4" type="MeshInstance3D" parent="corection/walls"]
 transform = Transform3D(1.9106855e-15, 4.371139e-08, 1, 1, -4.371139e-08, 0, 4.371139e-08, 1, -4.371139e-08, -7, 3, 5)
 layers = 6
 mesh = SubResource("BoxMesh_qa2gd")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="corection/walls/pared_4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corection/walls/pared_4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_f0hjn")
 
 [node name="Parede_porta" type="Node3D" parent="corection/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
@@ -179,6 +208,11 @@ transform = Transform3D(4.371139e-08, 1, -8.742278e-08, 1, -4.371139e-08, 0, -3.
 layers = 2
 mesh = SubResource("BoxMesh_cep8v")
 skeleton = NodePath("../../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="corection/walls/Parede_porta/pared_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="corection/walls/Parede_porta/pared_2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4y7c0")
 
 [node name="pared_porta_1" type="MeshInstance3D" parent="corection/walls/Parede_porta"]
 transform = Transform3D(-4.371138e-08, -0.9999998, -0.00062831846, 1, -4.371139e-08, 0, -2.7464673e-11, -0.00062831846, 0.9999998, 0, 2, -2.9)
