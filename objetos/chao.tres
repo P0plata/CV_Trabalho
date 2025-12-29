@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://5xatgkea0qrc"]
+
+[ext_resource type="Texture2D" uid="uid://dyeillowvlxok" path="res://meshs/textures/plank_flooring_04_diff_2k.png" id="1_icdhn"]
+[ext_resource type="Texture2D" uid="uid://do3s576bnw5tr" path="res://meshs/textures/plank_flooring_04_disp_2k.png" id="2_wrg8m"]
+[ext_resource type="Texture2D" uid="uid://h4kxitl8pnu4" path="res://meshs/textures/plank_flooring_04_nor_gl_2k.png" id="3_08gaj"]
+[ext_resource type="Texture2D" uid="uid://by45jtn8qu8ql" path="res://meshs/textures/plank_flooring_04_rough_2k.png" id="4_pjja6"]
+
+[resource]
+albedo_texture = ExtResource("1_icdhn")
+roughness_texture = ExtResource("4_pjja6")
+normal_enabled = true
+normal_texture = ExtResource("3_08gaj")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_wrg8m")

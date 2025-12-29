@@ -23,6 +23,10 @@ Main="*res://main/main.gd"
 
 enabled=PackedStringArray("res://addons/proto_shape/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_forward={

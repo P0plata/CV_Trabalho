@@ -1,6 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bxxvslww37rao"]
 
 [ext_resource type="Script" uid="uid://cobuotpeqr6ts" path="res://objetos/porta.gd" id="1_nb8x0"]
+[ext_resource type="Material" uid="uid://boxmomcp35s4r" path="res://objetos/door.tres" id="2_dn2kl"]
 
 [sub_resource type="Animation" id="Animation_gcrg1"]
 resource_name = "Open_door"
@@ -47,10 +48,8 @@ size = Vector3(1.6, 2.4, 2.2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gcrg1"]
 size = Vector3(0.2, 2.4, 1.4)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3lt6"]
-albedo_color = Color(0.3372549, 0.20392157, 0.16470589, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_xqs2t"]
+material = ExtResource("2_dn2kl")
 size = Vector3(0.2, 2.4, 1.4)
 
 [node name="Door" type="Node3D" node_paths=PackedStringArray("anim_player", "spawn_position")]
@@ -94,7 +93,6 @@ shape = SubResource("BoxShape3D_gcrg1")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Hinge/Porta"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
 layers = 3
-material_override = SubResource("StandardMaterial3D_k3lt6")
 mesh = SubResource("BoxMesh_xqs2t")
 
 [connection signal="body_entered" from="Area_open" to="." method="_ativacao_entrar"]

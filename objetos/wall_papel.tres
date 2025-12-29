@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dor06a6jur4m3"]
+
+[ext_resource type="Texture2D" uid="uid://d1euqnpuk10q4" path="res://meshs/textures/painted_plaster_wall_diff_2k.png" id="1_ibody"]
+[ext_resource type="Texture2D" uid="uid://c7oql6721i6de" path="res://meshs/textures/painted_plaster_wall_disp_2k.png" id="2_u2w88"]
+[ext_resource type="Texture2D" uid="uid://02n0on8n1imd" path="res://meshs/textures/painted_plaster_wall_nor_gl_2k.png" id="3_q2dby"]
+[ext_resource type="Texture2D" uid="uid://by7tdpha0xgtv" path="res://meshs/textures/painted_plaster_wall_rough_2k.png" id="4_470yr"]
+
+[resource]
+albedo_texture = ExtResource("1_ibody")
+roughness_texture = ExtResource("4_470yr")
+normal_enabled = true
+normal_texture = ExtResource("3_q2dby")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_u2w88")

@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://boxmomcp35s4r"]
+
+[ext_resource type="Texture2D" uid="uid://c3pfpsrvsd53k" path="res://meshs/textures/rough_pine_door_diff_2k.png" id="1_jwhnm"]
+[ext_resource type="Texture2D" uid="uid://cael1x0u5bipm" path="res://meshs/textures/rough_pine_door_disp_2k.png" id="2_uq5hp"]
+[ext_resource type="Texture2D" uid="uid://bre8xcke2edd6" path="res://meshs/textures/rough_pine_door_nor_gl_2k.png" id="3_1w7uq"]
+[ext_resource type="Texture2D" uid="uid://dhyu4movd7jwx" path="res://meshs/textures/rough_pine_door_rough_2k.png" id="4_4i6xb"]
+
+[resource]
+albedo_texture = ExtResource("1_jwhnm")
+roughness_texture = ExtResource("4_4i6xb")
+normal_enabled = true
+normal_texture = ExtResource("3_1w7uq")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_uq5hp")
