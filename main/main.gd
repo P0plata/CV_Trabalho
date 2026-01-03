@@ -1,15 +1,15 @@
 extends Node3D
 
 # --- DADOS DO JOGO ---
-#var sala1_done: bool = false
-#var sala2_done: bool = false
-#var sala3_done: bool = false
-#var sala4_done: bool = false
+var sala1_done: bool = false
+var sala2_done: bool = false
+var sala3_done: bool = false
+var sala4_done: bool = false
 
-var sala1_done: bool = true
-var sala2_done: bool = true
-var sala3_done: bool = true
-var sala4_done: bool = true
+#var sala1_done: bool = true
+#var sala2_done: bool = true
+#var sala3_done: bool = true
+#var sala4_done: bool = true
 
 var door_open: bool = false
 var current_room : Node = null
