@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dnbixsrf5ltxv"]
+
+[ext_resource type="Texture2D" uid="uid://cfhvskw3s3oog" path="res://meshs/textures/rock_wall_09_diff_2k.png" id="1_issp4"]
+[ext_resource type="Texture2D" uid="uid://dshbijrb0617p" path="res://meshs/textures/lichen_rock_disp_2k.png" id="2_hvilq"]
+[ext_resource type="Texture2D" uid="uid://b2dfb4xbu0dfc" path="res://meshs/textures/rock_wall_09_nor_gl_2k.png" id="3_vrges"]
+[ext_resource type="Texture2D" uid="uid://dutxh210s1wrp" path="res://meshs/textures/rock_wall_09_disp_2k.png" id="4_l3qg4"]
+
+[resource]
+albedo_texture = ExtResource("1_issp4")
+roughness_texture = ExtResource("4_l3qg4")
+normal_enabled = true
+normal_texture = ExtResource("3_vrges")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_hvilq")
+uv1_scale = Vector3(20, 20, 1)

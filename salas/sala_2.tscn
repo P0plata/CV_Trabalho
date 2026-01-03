@@ -1,8 +1,13 @@
-[gd_scene load_steps=35 format=3 uid="uid://cln620btrvn1b"]
+[gd_scene load_steps=41 format=3 uid="uid://cln620btrvn1b"]
 
 [ext_resource type="Script" uid="uid://t2r83sieelj4" path="res://salas/sala_2.gd" id="1_8s1wx"]
 [ext_resource type="Material" uid="uid://nnx8404i3exs" path="res://objetos/lampada.tres" id="2_8s1wx"]
+[ext_resource type="Texture2D" uid="uid://dyeillowvlxok" path="res://meshs/textures/plank_flooring_04_diff_2k.png" id="2_d0218"]
+[ext_resource type="Texture2D" uid="uid://do3s576bnw5tr" path="res://meshs/textures/plank_flooring_04_disp_2k.png" id="3_7hnew"]
 [ext_resource type="PackedScene" uid="uid://cdbhqsjfy1wto" path="res://objetos/glaidos_coin.tscn" id="3_ua8td"]
+[ext_resource type="Texture2D" uid="uid://h4kxitl8pnu4" path="res://meshs/textures/plank_flooring_04_nor_gl_2k.png" id="4_gyeim"]
+[ext_resource type="Texture2D" uid="uid://by45jtn8qu8ql" path="res://meshs/textures/plank_flooring_04_rough_2k.png" id="5_nb3yc"]
+[ext_resource type="Material" uid="uid://dor06a6jur4m3" path="res://objetos/wall_papel.tres" id="7_7hnew"]
 
 [sub_resource type="Environment" id="Environment_xqs2t"]
 
@@ -11,20 +16,33 @@
 [sub_resource type="Compositor" id="Compositor_xwn67"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_irmov"]
+material = ExtResource("2_8s1wx")
 size = Vector3(16, 0.012, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_d0218"]
 data = PackedVector3Array(-8, 0.006, 5, 8, 0.006, 5, -8, -0.006, 5, 8, 0.006, 5, 8, -0.006, 5, -8, -0.006, 5, 8, 0.006, -5, -8, 0.006, -5, 8, -0.006, -5, -8, 0.006, -5, -8, -0.006, -5, 8, -0.006, -5, 8, 0.006, 5, 8, 0.006, -5, 8, -0.006, 5, 8, 0.006, -5, 8, -0.006, -5, 8, -0.006, 5, -8, 0.006, -5, -8, 0.006, 5, -8, -0.006, -5, -8, 0.006, 5, -8, -0.006, 5, -8, -0.006, -5, 8, 0.006, 5, -8, 0.006, 5, 8, 0.006, -5, -8, 0.006, 5, -8, 0.006, -5, 8, 0.006, -5, -8, -0.006, 5, 8, -0.006, 5, -8, -0.006, -5, 8, -0.006, 5, 8, -0.006, -5, -8, -0.006, -5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a2atv"]
+albedo_texture = ExtResource("2_d0218")
+roughness_texture = ExtResource("5_nb3yc")
+normal_enabled = true
+normal_texture = ExtResource("4_gyeim")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_7hnew")
+uv1_scale = Vector3(6, 2, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_1mse6"]
+material = SubResource("StandardMaterial3D_a2atv")
 size = Vector3(16, 0.012, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qa2gd"]
+material = ExtResource("7_7hnew")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gcrg1"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_8s1wx"]
+material = ExtResource("7_7hnew")
 size = Vector3(10, 0.012, 16)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7hnew"]
@@ -37,8 +55,10 @@ data = PackedVector3Array(-5, 0.006, 8, 5, 0.006, 8, -5, -0.006, 8, 5, 0.006, 8,
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gcrg1"]
+material = ExtResource("7_7hnew")
 
 [sub_resource type="BoxMesh" id="BoxMesh_xwn67"]
+material = ExtResource("7_7hnew")
 size = Vector3(0.12, 7.55, 1.4)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ua8td"]
@@ -172,7 +192,7 @@ skeleton = NodePath("../../../..")
 shape = SubResource("ConcavePolygonShape3D_gyeim")
 
 [node name="Parede_porta" type="Node3D" parent="Correcao/walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95, 0, 0)
 
 [node name="pared_porta_1" type="MeshInstance3D" parent="Correcao/walls/Parede_porta"]
 transform = Transform3D(-4.371139e-07, -0.12, 0, 10, -5.2453664e-09, 0, 0, 0, 4.4, 0, 5, -2.9)
@@ -197,7 +217,7 @@ transform = Transform3D(1, 0, 6.352747e-22, -1.364242e-12, 1, 1.364242e-12, 2.11
 shape = SubResource("ConcavePolygonShape3D_xwn67")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Correcao/walls/Parede_porta"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.22, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009277344, 6.22, 4.0552095e-10)
 mesh = SubResource("BoxMesh_xwn67")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Correcao/walls/Parede_porta/MeshInstance3D"]

@@ -16,6 +16,7 @@ extends Node3D
 # VARIÁVEIS INTERNAS
 # ==========================================
 var porta_correta: Array[int] = []
+var completed := false
 var sala_atual := 0
 var env: Environment
 var rodar_ambiente := false # Variável para controlar a rotação na Sala 3
@@ -102,7 +103,11 @@ func _resetar_player():
 
 func _puzzle_completo():
 	print("🎉 PUZZLE COMPLETO")
-	if coin: 
+
+	
+	if coin and !completed: 
+		completed = true
+		if "sala4_done" in Main: Main.sala4_done = true
 		coin.visible = true
 		if coin.has_node("CollisionShape3D"):
 			coin.get_node("CollisionShape3D").set_deferred("disabled", false)

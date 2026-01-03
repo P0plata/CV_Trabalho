@@ -1,12 +1,17 @@
-[gd_scene load_steps=32 format=3 uid="uid://cec1www2fmcx1"]
+[gd_scene load_steps=34 format=3 uid="uid://cec1www2fmcx1"]
 
 [ext_resource type="PackedScene" uid="uid://7aertwq573ev" path="res://player/player.tscn" id="2_g2lei"]
 [ext_resource type="Material" uid="uid://5xatgkea0qrc" path="res://objetos/chao.tres" id="2_orafi"]
 [ext_resource type="PackedScene" uid="uid://bxxvslww37rao" path="res://objetos/door.tscn" id="2_tyqbv"]
 [ext_resource type="Material" uid="uid://dor06a6jur4m3" path="res://objetos/wall_papel.tres" id="2_uo6pv"]
+[ext_resource type="Script" uid="uid://cu3g4iib0wprv" path="res://objetos/door_final.gd" id="5_t6hem"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ltnpd"]
+material = ExtResource("2_uo6pv")
 size = Vector3(0.12, 2.4, 1.45)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_arhq8"]
+data = PackedVector3Array(-0.06, 1.1999999, 0.72499996, 0.06, 1.1999999, 0.72499996, -0.06, -1.1999999, 0.72499996, 0.06, 1.1999999, 0.72499996, 0.06, -1.1999999, 0.72499996, -0.06, -1.1999999, 0.72499996, 0.06, 1.1999999, -0.72499996, -0.06, 1.1999999, -0.72499996, 0.06, -1.1999999, -0.72499996, -0.06, 1.1999999, -0.72499996, -0.06, -1.1999999, -0.72499996, 0.06, -1.1999999, -0.72499996, 0.06, 1.1999999, 0.72499996, 0.06, 1.1999999, -0.72499996, 0.06, -1.1999999, 0.72499996, 0.06, 1.1999999, -0.72499996, 0.06, -1.1999999, -0.72499996, 0.06, -1.1999999, 0.72499996, -0.06, 1.1999999, -0.72499996, -0.06, 1.1999999, 0.72499996, -0.06, -1.1999999, -0.72499996, -0.06, 1.1999999, 0.72499996, -0.06, -1.1999999, 0.72499996, -0.06, -1.1999999, -0.72499996, 0.06, 1.1999999, 0.72499996, -0.06, 1.1999999, 0.72499996, 0.06, 1.1999999, -0.72499996, -0.06, 1.1999999, 0.72499996, -0.06, 1.1999999, -0.72499996, 0.06, 1.1999999, -0.72499996, -0.06, -1.1999999, 0.72499996, 0.06, -1.1999999, 0.72499996, -0.06, -1.1999999, -0.72499996, 0.06, -1.1999999, 0.72499996, 0.06, -1.1999999, -0.72499996, -0.06, -1.1999999, -0.72499996)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tyqbv"]
 material = ExtResource("2_uo6pv")
@@ -16,6 +21,7 @@ size = Vector3(0.12, 2.4, 1.35)
 data = PackedVector3Array(-0.06, 1.1999999, 0.7, 0.06, 1.1999999, 0.7, -0.06, -1.1999999, 0.7, 0.06, 1.1999999, 0.7, 0.06, -1.1999999, 0.7, -0.06, -1.1999999, 0.7, 0.06, 1.1999999, -0.7, -0.06, 1.1999999, -0.7, 0.06, -1.1999999, -0.7, -0.06, 1.1999999, -0.7, -0.06, -1.1999999, -0.7, 0.06, -1.1999999, -0.7, 0.06, 1.1999999, 0.7, 0.06, 1.1999999, -0.7, 0.06, -1.1999999, 0.7, 0.06, 1.1999999, -0.7, 0.06, -1.1999999, -0.7, 0.06, -1.1999999, 0.7, -0.06, 1.1999999, -0.7, -0.06, 1.1999999, 0.7, -0.06, -1.1999999, -0.7, -0.06, 1.1999999, 0.7, -0.06, -1.1999999, 0.7, -0.06, -1.1999999, -0.7, 0.06, 1.1999999, 0.7, -0.06, 1.1999999, 0.7, 0.06, 1.1999999, -0.7, -0.06, 1.1999999, 0.7, -0.06, 1.1999999, -0.7, 0.06, 1.1999999, -0.7, -0.06, -1.1999999, 0.7, 0.06, -1.1999999, 0.7, -0.06, -1.1999999, -0.7, 0.06, -1.1999999, 0.7, 0.06, -1.1999999, -0.7, -0.06, -1.1999999, -0.7)
 
 [sub_resource type="BoxMesh" id="BoxMesh_orafi"]
+material = ExtResource("2_uo6pv")
 size = Vector3(0.12, 0.2, 1.4)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o3fcx"]
@@ -113,6 +119,11 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4, 
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0.099999905, 1.2, 1.7484524e-08)
 mesh = SubResource("BoxMesh_ltnpd")
 skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Easter_egg/False_wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Easter_egg/False_wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_arhq8")
 
 [node name="False_wall_left" type="MeshInstance3D" parent="Easter_egg"]
 transform = Transform3D(1, 0, -1.7484555e-07, 0, 1, 0, 1.7484555e-07, 0, 1, 0.099999666, 1.2, 1.4)
@@ -303,6 +314,5 @@ next_scene_path = "res://salas/sala_4.tscn"
 
 [node name="Door_sala7" parent="doors" instance=ExtResource("2_tyqbv")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 12.25, 0.06, 0)
-
-[node name="Door_sala8" parent="doors" instance=ExtResource("2_tyqbv")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -4, 0.06, 0)
+script = ExtResource("5_t6hem")
+final_scene_path = "res://salas/sala_5.tscn"

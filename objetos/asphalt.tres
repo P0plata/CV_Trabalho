@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://dy5uvj3ibb40y"]
+
+[ext_resource type="Texture2D" uid="uid://b53q2i3ola3eh" path="res://meshs/textures/worn_asphalt_diff_2k.png" id="1_7do3s"]
+[ext_resource type="Texture2D" uid="uid://blustqb86nlal" path="res://meshs/textures/worn_asphalt_disp_2k.png" id="2_j7rux"]
+[ext_resource type="Texture2D" uid="uid://bmwpyb15lpxyc" path="res://meshs/textures/worn_asphalt_nor_gl_2k.png" id="3_nonfv"]
+[ext_resource type="Texture2D" uid="uid://b2nlu76qhte8t" path="res://meshs/textures/worn_asphalt_rough_2k.png" id="4_ckuwk"]
+
+[resource]
+albedo_texture = ExtResource("1_7do3s")
+roughness_texture = ExtResource("4_ckuwk")
+normal_enabled = true
+normal_texture = ExtResource("3_nonfv")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_j7rux")

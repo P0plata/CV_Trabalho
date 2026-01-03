@@ -394,7 +394,7 @@ shape = SubResource("ConcavePolygonShape3D_ya8yk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
 [node name="pared_porta_1" type="MeshInstance3D" parent="Correcao/walls/Parede_porta"]
-transform = Transform3D(-4.371139e-07, -0.12, 0, 10, -5.2453664e-09, 0, 0, 0, 4.4, 0, 5, -2.9)
+transform = Transform3D(-4.371139e-07, -0.12, 0, 10, -5.2453664e-09, 0, 0, 0, 4.4, -0.05, 5, -2.9)
 mesh = SubResource("BoxMesh_f71j8")
 skeleton = NodePath("../../../../..")
 
@@ -405,7 +405,7 @@ transform = Transform3D(1, 0, 6.352747e-22, -1.364242e-12, 1, 1.364242e-12, 2.11
 shape = SubResource("ConcavePolygonShape3D_lvvmt")
 
 [node name="pared_porta_2" type="MeshInstance3D" parent="Correcao/walls/Parede_porta"]
-transform = Transform3D(-4.371139e-07, -0.1, 0, 10, -4.371139e-09, 0, 0, 0, 4.4, 0, 5, 2.9)
+transform = Transform3D(-4.371139e-07, -0.1, 0, 10, -4.371139e-09, 0, 0, 0, 4.4, -0.05, 5, 2.9)
 mesh = SubResource("BoxMesh_n3qr7")
 skeleton = NodePath("../../../../..")
 
@@ -416,7 +416,7 @@ transform = Transform3D(1, 0, 6.352747e-22, -1.364242e-12, 1, 1.364242e-12, 2.11
 shape = SubResource("ConcavePolygonShape3D_lvvmt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Correcao/walls/Parede_porta"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.22, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 6.22, 0)
 mesh = SubResource("BoxMesh_b6n14")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Correcao/walls/Parede_porta/MeshInstance3D"]
